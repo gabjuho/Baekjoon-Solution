@@ -15,9 +15,8 @@ int solve(int n)
 
 	int n1 = solve(n - 1);
 	int n2 = solve(n - 2);
-	int n3 = solve(n - 2);
 
-	return dp[n] = (n1 + n2 + n3) % 10007;
+	return dp[n] = (n1 + n2 * 2) % 10007;
 }
 
 int main()
