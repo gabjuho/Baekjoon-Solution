@@ -558,5 +558,11 @@
     <ClCompile Include="2580.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="10830.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11718.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
