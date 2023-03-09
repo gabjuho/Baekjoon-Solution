@@ -28,19 +28,24 @@ int main()
 			while (!s.empty() && h[i] < h[s.top()])
 			{
 				long long hTop = h[s.top()];
+				//스택이 비워져있으면, 직사각형의 너비는 인덱스와 동일하다.
 				int l = i;
 				s.pop();
 
+				//스택이 비워져있지 않으면, 직사각형의 너비 계산
 				if (!s.empty())
 					l = i - s.top() - 1;
 
+				//직사각형의 최댓값 갱신
 				if (max < l * hTop)
 					max = l * hTop;
 			}
 
+			//스택에 인덱스 푸시
 			s.push(i);
 		}
 
+		//모든 막대들의 순회를 마쳐도 스택에 처리되지 않은 막대들의 인덱스들이 남아있다면
 		while (!s.empty())
 		{
 			long long hTop = h[s.top()];
